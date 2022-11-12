@@ -1,4 +1,15 @@
+@use '../config/variables.scss' as *;
+@use '../config/fonts.scss' as *;
+
 html {
+  font-size: 16px;
 }
+
 body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-color);
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
 }

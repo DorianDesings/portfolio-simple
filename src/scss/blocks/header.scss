@@ -1,1 +1,99 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../functions/image.scss' as *;
 
+.header {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+
+  @include responsive(tablet) {
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo(100%, 100%);
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    background-image: image('pattern-rings.svg');
+    background-position: -350px 175px;
+
+    @include responsive(tablet) {
+      background-position: -350px 86px;
+    }
+
+    @include responsive(laptop) {
+      background-position: -350px 133px;
+    }
+  }
+
+  &::after {
+    background-image: image('pattern-circle.svg');
+    background-position: 320px 254px;
+
+    @include responsive(tablet) {
+      background-position: 725px 470px;
+    }
+
+    @include responsive(laptop) {
+      background-position: 950px 520px;
+    }
+  }
+  // background-color: lightpink;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 115px;
+    padding: 1rem 0;
+
+    @include responsive(tablet) {
+      flex-direction: row;
+      padding: 1rem 2rem;
+    }
+
+    @include responsive(laptop) {
+      padding: 1rem 4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(tablet) {
+      flex-direction: row-reverse;
+      justify-content: start;
+    }
+
+    @include responsive(laptop) {
+    }
+  }
+
+  &__info {
+    @include responsive(tablet) {
+      width: 450px;
+    }
+
+    @include responsive(laptop) {
+      width: 700px;
+    }
+  }
+
+  &__text {
+    @include responsive(laptop) {
+      width: 445px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use '../mixins/responsive.scss' as *;
+
+.profile-image {
+  position: relative;
+  top: -115px;
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include responsive(tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 322px;
+    margin-right: 0;
+    z-index: -1;
+  }
+
+  @include responsive(laptop) {
+    width: 445px;
+  }
+}

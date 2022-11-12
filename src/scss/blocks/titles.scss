@@ -1,1 +1,13 @@
+@use '../mixins/responsive.scss' as *;
 
+.main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include responsive(tablet) {
+    font-size: 4.5rem;
+    margin-bottom: 3.75rem;
+  }
+}

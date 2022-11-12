@@ -1,0 +1,17 @@
+@use '../mixins/responsive.scss' as *;
+.experience {
+  display: grid;
+  gap: 2rem 0;
+  text-align: center;
+
+  @include responsive(tablet) {
+    gap: 2rem 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+
+  @include responsive(laptop) {
+    gap: 2rem 5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

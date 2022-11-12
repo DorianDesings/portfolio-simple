@@ -1,1 +1,4 @@
-/* ESTILOS DEL MAIN */
+@use '../mixins/responsive.scss' as *;
+.main {
+  padding: 0 1rem;
+}
