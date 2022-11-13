@@ -3,10 +3,9 @@
 @use '../functions/image.scss' as *;
 
 .header {
-  height: 100vh;
   position: relative;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem;
 
   @include responsive(tablet) {
     padding: 0 2rem;

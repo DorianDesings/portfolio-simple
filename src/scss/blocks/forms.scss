@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__label {
+    text-align: left;
+  }
+
+  &__input,
+  &__textarea,
+  &__submit {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    color: var(--white);
+    outline: none;
+  }
+
+  &__textarea {
+    resize: none;
+    height: 75px;
+    margin-bottom: 1rem;
+  }
+
+  &__field--submit {
+    align-self: end;
+    border: none;
+    width: 125px;
+  }
+}

@@ -1,1 +1,18 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/pseudo.scss' as *;
+@use '../functions/image.scss' as *;
+
+.footer {
+  position: relative;
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 2rem 3rem;
+
+  &::before {
+    @include pseudo(100%, 100%);
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-image: image('pattern-rings.svg');
+    background-position: -350px 350px;
+  }
+}

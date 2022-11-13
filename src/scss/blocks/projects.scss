@@ -1,4 +1,10 @@
 @use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+
+.projects-container {
+  // padding: 5rem 0;
+}
+
 .projects {
   display: grid;
   gap: 3rem 0;
@@ -7,12 +13,28 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 2rem;
   }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
 }
 
-.project-image {
-  display: block;
-  transform: scale(0);
-  transition: transform 0.3s;
+.project {
+  &-image {
+    display: block;
+    transform: scale(0);
+    transition: transform 0.3s;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    font-size: 0.8rem;
+  }
 }
 
 .tecnologies {
@@ -21,7 +43,4 @@
   width: 55%;
   font-size: 0.8rem;
   margin-bottom: 2rem;
-
-  &__item {
-  }
 }

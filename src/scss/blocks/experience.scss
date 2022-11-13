@@ -1,8 +1,30 @@
 @use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../functions/image.scss' as *;
+
 .experience {
+  position: relative;
   display: grid;
   gap: 2rem 0;
   text-align: center;
+  padding: 2rem 0 12rem;
+
+  &::after {
+    @include pseudo(100%, 100%);
+    top: 0;
+    left: 0;
+    background-image: image('pattern-rings.svg');
+    background-repeat: no-repeat;
+    background-position: 150px 575px;
+  }
+
+  &::before {
+    @include pseudo(100%, 0.125rem);
+    top: 0;
+    left: 0;
+    background-color: var(--grey);
+    box-shadow: 0 650px var(--grey);
+  }
 
   @include responsive(tablet) {
     gap: 2rem 5rem;

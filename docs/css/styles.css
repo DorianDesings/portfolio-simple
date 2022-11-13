@@ -385,10 +385,9 @@ body {
 }
 
 .header {
-  height: 100vh;
   position: relative;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -537,9 +536,32 @@ body {
 }
 
 .experience {
+  position: relative;
   display: grid;
   gap: 2rem 0;
   text-align: center;
+  padding: 2rem 0 12rem;
+}
+.experience::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/images/pattern-rings.svg");
+  background-repeat: no-repeat;
+  background-position: 150px 575px;
+}
+.experience::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  top: 0;
+  left: 0;
+  background-color: var(--grey);
+  box-shadow: 0 650px var(--grey);
 }
 @media screen and (min-width: 768px) {
   .experience {
@@ -565,11 +587,23 @@ body {
     gap: 3rem 2rem;
   }
 }
+.projects__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
 
 .project-image {
   display: block;
   transform: scale(0);
   transition: transform 0.3s;
+}
+.project__links {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+  font-size: 0.8rem;
 }
 
 .tecnologies {
@@ -579,7 +613,58 @@ body {
   font-size: 0.8rem;
   margin-bottom: 2rem;
 }
-/* ESTILOS DEL FOOTER */
+
+.footer {
+  position: relative;
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 2rem 3rem;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/pattern-rings.svg");
+  background-position: -350px 350px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.form__label {
+  text-align: left;
+}
+.form__input, .form__textarea, .form__submit {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey);
+  color: var(--white);
+  outline: none;
+}
+.form__textarea {
+  resize: none;
+  height: 75px;
+  margin-bottom: 1rem;
+}
+.form__field--submit {
+  align-self: end;
+  border: none;
+  width: 125px;
+}
+
 .underline {
   position: relative;
 }
