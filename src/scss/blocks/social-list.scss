@@ -1,5 +1,11 @@
 .social-list {
   display: flex;
-  width: 155px;
+  align-items: center;
   justify-content: space-between;
+  width: 155px;
+
+  &__link {
+    display: inline-block;
+    width: 20px;
+  }
 }

@@ -8,8 +8,13 @@
   padding: 0 1rem 4rem;
 
   @include responsive(tablet) {
-    padding: 0 2rem;
     text-align: left;
+    height: 650px;
+  }
+
+  @include responsive(laptop) {
+    height: 775px;
+    padding: 0 0 4rem 0;
   }
 
   &::before,
@@ -17,12 +22,13 @@
     @include pseudo(100%, 100%);
     top: 0;
     left: 0;
+    z-index: -1;
     background-repeat: no-repeat;
   }
 
   &::before {
     background-image: image('pattern-rings.svg');
-    background-position: -350px 175px;
+    background-position: -350px 125px;
 
     @include responsive(tablet) {
       background-position: -350px 86px;
@@ -35,17 +41,16 @@
 
   &::after {
     background-image: image('pattern-circle.svg');
-    background-position: 320px 254px;
+    background-position: 85vw 254px;
 
     @include responsive(tablet) {
-      background-position: 725px 470px;
+      background-position: 90vw 470px;
     }
 
     @include responsive(laptop) {
       background-position: 950px 520px;
     }
   }
-  // background-color: lightpink;
 
   &__top {
     display: flex;
@@ -65,34 +70,47 @@
     }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+  &__picture {
+    display: block;
+    height: 300px;
     @include responsive(tablet) {
-      flex-direction: row-reverse;
-      justify-content: start;
+      display: inline;
+    }
+  }
+
+  &__content {
+    height: 600px;
+    @include responsive(tablet) {
+      height: calc(598px - 115px);
+      width: 500px;
+      padding-left: 2rem;
     }
 
     @include responsive(laptop) {
+      padding-left: 4rem;
+      width: 700px;
+      height: 400px;
     }
   }
 
   &__info {
-    @include responsive(tablet) {
-      width: 450px;
-    }
+    position: relative;
+    height: 250px;
 
-    @include responsive(laptop) {
-      width: 700px;
+    @include responsive(tablet) {
+      height: 100%;
     }
   }
 
-  &__text {
-    @include responsive(laptop) {
-      width: 445px;
+  &__link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(tablet) {
+      left: 0;
+      transform: none;
     }
   }
 }

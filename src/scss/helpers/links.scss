@@ -1,0 +1,9 @@
+@use '../mixins/hover.scss' as *;
+.link {
+  cursor: pointer;
+  @include hover {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

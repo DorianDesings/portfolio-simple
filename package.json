@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "rm -rf ./dist/css & sass --watch --no-source-map ./src/scss/styles.scss ./dist/css/styles.css",
-    "build": "postcss dist/css/styles.css -o dist/css/styles.min.css & rm -rf dist/css/styles.css"
+    "sass": "rm -rf ./dist/css & sass --watch --no-source-map ./src/scss/styles.scss ./docs/css/styles.css",
+    "build": "postcss docs/css/styles.css -o docs/css/styles.min.css & rm -rf docs/css/styles.css"
   },
   "keywords": [],
   "author": "",
